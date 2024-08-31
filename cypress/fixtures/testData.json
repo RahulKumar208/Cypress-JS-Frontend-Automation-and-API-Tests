@@ -1,0 +1,14 @@
+{
+    "birthdate": {
+      "valid": {
+        "day": "01",
+        "month": "01",
+        "year": "1990"
+      },
+      "invalid": {
+        "day": "32",
+        "month": "13",
+        "year": "2000"
+      }
+    }
+  }
