@@ -16,7 +16,21 @@ describe('Insurance Premium Calculator Using XPath', () => {
     // Enter an income of "70000"
     cy.xpath("//*[@data-cy='income-input' and @placeholder='Bitte hier eingeben']").type('70000');
     cy.xpath("//button[@type='submit' and @data-cy='employment-status-continue']").click();
+    
+    // Ensure we are on the correct page
+    cy.url().should('include', '/versicherungswunsch');
+    // Select "Vollversicherung" insurance type
+    cy.xpath("//*[text()='Vollversicherung']").click();
+    // Click start date dropdown
+    cy.get('#undefined').select('3: 2024-10-01').should('have.value','3: 2024-10-01');
+    cy.xpath("//button[@type='submit' and @data-cy='insurance-product-continue']").click();
+
+
+    // Ensure we are on the correct page
+    cy.url().should('include', '/geburtstag');
+
   });
 
   
+ 
 });
