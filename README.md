@@ -18,7 +18,9 @@ Install Node.js and npm from here if not installed.
 
 # Project Structure
 Ottonova-Cypress-Automation/
+
 │
+
 ├── cypress/
 │   ├── e2e/
 │   │   ├── automation.cy.js  # Frontend test file
