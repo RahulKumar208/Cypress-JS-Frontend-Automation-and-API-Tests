@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <script>
+      // Function to call PokeAPI
+      async function getPokemon(pokemon) {
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
+        return response.json();
+      }
+      // Call API for Charmander
+      getPokemon('charmander').then(data => {
+        console.log(data);
+      }).catch(error => {
+        console.error('Error:', error);
+      });
+    </script>
+  </body>
+</html>
