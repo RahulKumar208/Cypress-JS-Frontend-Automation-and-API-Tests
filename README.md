@@ -22,22 +22,39 @@ Ottonova-Cypress-Automation/
 │
 
 ├── cypress/
+
 │   ├── e2e/
+
 │   │   ├── automation.cy.js  # Frontend test file
+
 │   │   ├── pokeapi.cy.js     # Backend API test file
+
 │   │
+
 │   ├── fixtures/
+
 │   │   ├── index.html        # HTML for backend test simulation
+
 │   │   ├── testData.json     # Test data for frontend tests
+
 │   │
+
 │   ├── support/
+
 │       ├── commands.js
+
 │       ├── e2e.js
+
 │
+
 ├── QA Strategy.dox           # QA strategy documentation
+
 ├── cypress.config.js         # Cypress configuration file
+
 ├── package.json              # Project dependencies
+
 ├── README.md                 # Project documentation
+
 
 # Running Tests
 1. Open Cypress Test Runner: npx cypress open
