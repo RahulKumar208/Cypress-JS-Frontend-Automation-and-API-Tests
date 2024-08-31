@@ -28,6 +28,23 @@ describe('Insurance Premium Calculator Using XPath', () => {
 
     // Ensure we are on the correct page
     cy.url().should('include', '/geburtstag');
+    // Enter an invalid birthdate type '32.13.2000' 
+    cy.xpath("//input[@placeholder='TT']").type('32'); // Invalid date
+    cy.xpath("//input[@placeholder='MM']").type('13');
+    cy.xpath("//input[@placeholder='JJJJ']").type('2000');
+    // Assert the error message is shown
+    cy.xpath("//*[@data-cy='invalid-age-validation-message']").should('contain', ' Bitte gib ein korrektes Datum ein. ');
+
+
+    // Clear and enter a valid birthdate
+    //cy.xpath("//*[@class='otto-field-wrapper otto-input']").clear();
+    cy.xpath("//input[@placeholder='TT']").type('01'); 
+    cy.xpath("//input[@placeholder='MM']").type('01');
+    cy.xpath("//input[@placeholder='JJJJ']").type('1990');
+    // Click on the 'Weiter' button to proceed
+    cy.xpath("//button[contains(text(), 'Weiter')]").click();
+    // Check if the URL includes '/nextPage'
+    cy.url().should('include', '/versicherungsstatus');
 
   });
 
