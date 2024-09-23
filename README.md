@@ -1,4 +1,4 @@
-# Ottonova Cypress Automation
+# Cypress Automation
 This repository contains Cypress-based automated tests for testing the Ottonova insurance premium calculator and interacting with the PokeAPI.
 
 # Prerequisites:
